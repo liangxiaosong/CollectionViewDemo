@@ -30,8 +30,39 @@ static NSString * const KLPPZCollectionViewCell = @"KLPPZCollectionViewCell";
     [super viewDidLoad];
     self.navigationItem.title = @"相册";
     [self.view addSubview:self.collectionView];
+
+    UILongPressGestureRecognizer *longTap = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longGest:)];
+    [self.collectionView addGestureRecognizer:longTap];
+
 }
 
+#pragma mark - 手势
+- (void)longGest:(UILongPressGestureRecognizer *)tap {
+    switch (tap.state) {
+        case UIGestureRecognizerStateBegan:
+        {
+            NSIndexPath *touchIndexPath = [self.collectionView indexPathForItemAtPoint:[tap locationInView:self.collectionView]];
+            if (touchIndexPath) {
+                [self.collectionView beginInteractiveMovementForItemAtIndexPath:touchIndexPath];
+            }else{
+                break;
+            }
+        }
+            break;
+        case UIGestureRecognizerStateChanged:
+        {
+            [self.collectionView updateInteractiveMovementTargetPosition:[tap locationInView:tap.view]];
+        }
+            break;
+        case UIGestureRecognizerStateEnded:
+        {
+            [self.collectionView endInteractiveMovement];
+        }
+            break;
+        default:
+            break;
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
