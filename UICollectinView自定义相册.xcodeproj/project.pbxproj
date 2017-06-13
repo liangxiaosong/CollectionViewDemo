@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19DA21D21EEE384000C730F8 /* LPPZCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DA21C71EEE384000C730F8 /* LPPZCollectionViewCell.m */; };
+		19DA21D31EEE384000C730F8 /* LPPZLineCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DA21C91EEE384000C730F8 /* LPPZLineCollectionViewCell.m */; };
+		19DA21D41EEE384000C730F8 /* LPPZPhotoShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DA21CC1EEE384000C730F8 /* LPPZPhotoShowViewController.m */; };
+		19DA21D51EEE384000C730F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DA21CE1EEE384000C730F8 /* ViewController.m */; };
+		19DA21D61EEE384000C730F8 /* LPPZLineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DA21D11EEE384000C730F8 /* LPPZLineLayout.m */; };
 		19F2EA9D1EEA7FA10015B80A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F2EA9C1EEA7FA10015B80A /* main.m */; };
 		19F2EAA01EEA7FA10015B80A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F2EA9F1EEA7FA10015B80A /* AppDelegate.m */; };
-		19F2EAA31EEA7FA10015B80A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F2EAA21EEA7FA10015B80A /* ViewController.m */; };
 		19F2EAA61EEA7FA10015B80A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19F2EAA41EEA7FA10015B80A /* Main.storyboard */; };
 		19F2EAA81EEA7FA10015B80A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19F2EAA71EEA7FA10015B80A /* Assets.xcassets */; };
 		19F2EAAB1EEA7FA10015B80A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19F2EAA91EEA7FA10015B80A /* LaunchScreen.storyboard */; };
 		19F2EAB61EEA7FA10015B80A /* UICollectinView_____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F2EAB51EEA7FA10015B80A /* UICollectinView_____Tests.m */; };
-		19F2EAC21EEA81D40015B80A /* LPPZCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F2EAC11EEA81D40015B80A /* LPPZCollectionViewCell.m */; };
 		19F2EADC1EEA835D0015B80A /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 19F2EAC41EEA835D0015B80A /* 0.jpg */; };
 		19F2EADD1EEA835D0015B80A /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 19F2EAC51EEA835D0015B80A /* 1.jpg */; };
 		19F2EADE1EEA835D0015B80A /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 19F2EAC61EEA835D0015B80A /* 10.jpg */; };
@@ -39,9 +42,6 @@
 		19F2EAF11EEA835D0015B80A /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 19F2EAD91EEA835D0015B80A /* 7.jpg */; };
 		19F2EAF21EEA835D0015B80A /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 19F2EADA1EEA835D0015B80A /* 8.jpg */; };
 		19F2EAF31EEA835D0015B80A /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 19F2EADB1EEA835D0015B80A /* 9.jpg */; };
-		19F2EAF61EEA951A0015B80A /* LPPZPhotoShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F2EAF51EEA951A0015B80A /* LPPZPhotoShowViewController.m */; };
-		19F2EAF91EEAAE7F0015B80A /* LPPZLineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F2EAF81EEAAE7F0015B80A /* LPPZLineLayout.m */; };
-		19F2EAFC1EEAAECD0015B80A /* LPPZLineCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F2EAFB1EEAAECD0015B80A /* LPPZLineCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,12 +55,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19DA21C61EEE384000C730F8 /* LPPZCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPZCollectionViewCell.h; sourceTree = "<group>"; };
+		19DA21C71EEE384000C730F8 /* LPPZCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPZCollectionViewCell.m; sourceTree = "<group>"; };
+		19DA21C81EEE384000C730F8 /* LPPZLineCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPZLineCollectionViewCell.h; sourceTree = "<group>"; };
+		19DA21C91EEE384000C730F8 /* LPPZLineCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPZLineCollectionViewCell.m; sourceTree = "<group>"; };
+		19DA21CB1EEE384000C730F8 /* LPPZPhotoShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPZPhotoShowViewController.h; sourceTree = "<group>"; };
+		19DA21CC1EEE384000C730F8 /* LPPZPhotoShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPZPhotoShowViewController.m; sourceTree = "<group>"; };
+		19DA21CD1EEE384000C730F8 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		19DA21CE1EEE384000C730F8 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		19DA21D01EEE384000C730F8 /* LPPZLineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPZLineLayout.h; sourceTree = "<group>"; };
+		19DA21D11EEE384000C730F8 /* LPPZLineLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPZLineLayout.m; sourceTree = "<group>"; };
 		19F2EA981EEA7FA10015B80A /* UICollectinView自定义相册.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UICollectinView自定义相册.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F2EA9C1EEA7FA10015B80A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		19F2EA9E1EEA7FA10015B80A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		19F2EA9F1EEA7FA10015B80A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		19F2EAA11EEA7FA10015B80A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		19F2EAA21EEA7FA10015B80A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		19F2EAA51EEA7FA10015B80A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19F2EAA71EEA7FA10015B80A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19F2EAAA1EEA7FA10015B80A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,8 +76,6 @@
 		19F2EAB11EEA7FA10015B80A /* UICollectinView自定义相册Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UICollectinView自定义相册Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F2EAB51EEA7FA10015B80A /* UICollectinView_____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UICollectinView_____Tests.m"; sourceTree = "<group>"; };
 		19F2EAB71EEA7FA10015B80A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		19F2EAC01EEA81D40015B80A /* LPPZCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPZCollectionViewCell.h; sourceTree = "<group>"; };
-		19F2EAC11EEA81D40015B80A /* LPPZCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPZCollectionViewCell.m; sourceTree = "<group>"; };
 		19F2EAC41EEA835D0015B80A /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
 		19F2EAC51EEA835D0015B80A /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		19F2EAC61EEA835D0015B80A /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
@@ -94,12 +100,6 @@
 		19F2EAD91EEA835D0015B80A /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
 		19F2EADA1EEA835D0015B80A /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
 		19F2EADB1EEA835D0015B80A /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
-		19F2EAF41EEA951A0015B80A /* LPPZPhotoShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPZPhotoShowViewController.h; sourceTree = "<group>"; };
-		19F2EAF51EEA951A0015B80A /* LPPZPhotoShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPZPhotoShowViewController.m; sourceTree = "<group>"; };
-		19F2EAF71EEAAE7F0015B80A /* LPPZLineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPZLineLayout.h; sourceTree = "<group>"; };
-		19F2EAF81EEAAE7F0015B80A /* LPPZLineLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPZLineLayout.m; sourceTree = "<group>"; };
-		19F2EAFA1EEAAECD0015B80A /* LPPZLineCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPZLineCollectionViewCell.h; sourceTree = "<group>"; };
-		19F2EAFB1EEAAECD0015B80A /* LPPZLineCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPZLineCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +120,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19DA21C51EEE384000C730F8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				19DA21C61EEE384000C730F8 /* LPPZCollectionViewCell.h */,
+				19DA21C71EEE384000C730F8 /* LPPZCollectionViewCell.m */,
+				19DA21C81EEE384000C730F8 /* LPPZLineCollectionViewCell.h */,
+				19DA21C91EEE384000C730F8 /* LPPZLineCollectionViewCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		19DA21CA1EEE384000C730F8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				19DA21CB1EEE384000C730F8 /* LPPZPhotoShowViewController.h */,
+				19DA21CC1EEE384000C730F8 /* LPPZPhotoShowViewController.m */,
+				19DA21CD1EEE384000C730F8 /* ViewController.h */,
+				19DA21CE1EEE384000C730F8 /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		19DA21CF1EEE384000C730F8 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				19DA21D01EEE384000C730F8 /* LPPZLineLayout.h */,
+				19DA21D11EEE384000C730F8 /* LPPZLineLayout.m */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		19F2EA8F1EEA7FA10015B80A = {
 			isa = PBXGroup;
 			children = (
@@ -141,24 +172,17 @@
 		19F2EA9A1EEA7FA10015B80A /* UICollectinView自定义相册 */ = {
 			isa = PBXGroup;
 			children = (
+				19DA21C51EEE384000C730F8 /* Cell */,
+				19DA21CA1EEE384000C730F8 /* Controller */,
+				19DA21CF1EEE384000C730F8 /* Layout */,
 				19F2EAC31EEA835D0015B80A /* Images */,
 				19F2EA9E1EEA7FA10015B80A /* AppDelegate.h */,
 				19F2EA9F1EEA7FA10015B80A /* AppDelegate.m */,
-				19F2EAA11EEA7FA10015B80A /* ViewController.h */,
-				19F2EAA21EEA7FA10015B80A /* ViewController.m */,
 				19F2EAA41EEA7FA10015B80A /* Main.storyboard */,
 				19F2EAA71EEA7FA10015B80A /* Assets.xcassets */,
 				19F2EAA91EEA7FA10015B80A /* LaunchScreen.storyboard */,
 				19F2EAAC1EEA7FA10015B80A /* Info.plist */,
 				19F2EA9B1EEA7FA10015B80A /* Supporting Files */,
-				19F2EAC01EEA81D40015B80A /* LPPZCollectionViewCell.h */,
-				19F2EAC11EEA81D40015B80A /* LPPZCollectionViewCell.m */,
-				19F2EAF41EEA951A0015B80A /* LPPZPhotoShowViewController.h */,
-				19F2EAF51EEA951A0015B80A /* LPPZPhotoShowViewController.m */,
-				19F2EAF71EEAAE7F0015B80A /* LPPZLineLayout.h */,
-				19F2EAF81EEAAE7F0015B80A /* LPPZLineLayout.m */,
-				19F2EAFA1EEAAECD0015B80A /* LPPZLineCollectionViewCell.h */,
-				19F2EAFB1EEAAECD0015B80A /* LPPZLineCollectionViewCell.m */,
 			);
 			path = "UICollectinView自定义相册";
 			sourceTree = "<group>";
@@ -337,13 +361,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19F2EAC21EEA81D40015B80A /* LPPZCollectionViewCell.m in Sources */,
-				19F2EAA31EEA7FA10015B80A /* ViewController.m in Sources */,
-				19F2EAF61EEA951A0015B80A /* LPPZPhotoShowViewController.m in Sources */,
-				19F2EAFC1EEAAECD0015B80A /* LPPZLineCollectionViewCell.m in Sources */,
+				19DA21D51EEE384000C730F8 /* ViewController.m in Sources */,
+				19DA21D31EEE384000C730F8 /* LPPZLineCollectionViewCell.m in Sources */,
 				19F2EAA01EEA7FA10015B80A /* AppDelegate.m in Sources */,
+				19DA21D41EEE384000C730F8 /* LPPZPhotoShowViewController.m in Sources */,
 				19F2EA9D1EEA7FA10015B80A /* main.m in Sources */,
-				19F2EAF91EEAAE7F0015B80A /* LPPZLineLayout.m in Sources */,
+				19DA21D21EEE384000C730F8 /* LPPZCollectionViewCell.m in Sources */,
+				19DA21D61EEE384000C730F8 /* LPPZLineLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +566,7 @@
 				19F2EABC1EEA7FA10015B80A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19F2EABD1EEA7FA10015B80A /* Build configuration list for PBXNativeTarget "UICollectinView自定义相册Tests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +575,7 @@
 				19F2EABF1EEA7FA10015B80A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -14,7 +14,7 @@
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor orangeColor];
         [self.contentView addSubview:self.imageView];
-        self.imageView.frame = CGRectMake(0, 0, ([UIScreen mainScreen].bounds.size.width-(3+1)*10)/3, 150);
+        self.imageView.frame = CGRectMake(0, 0, ([UIScreen mainScreen].bounds.size.width-40) /3, 150);//(KWidth - 20)/kRowCount
     }
     return self;
 }

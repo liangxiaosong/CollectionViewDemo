@@ -21,6 +21,8 @@ static NSString * const KLPPZCollectionViewCell = @"KLPPZCollectionViewCell";
 @interface ViewController ()<UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 
 @property (nonatomic, strong) UICollectionView                   *collectionView;
+@property (nonatomic, strong) UILongPressGestureRecognizer       *longTap;
+@property (nonatomic, strong) NSMutableArray                   *dataArray;
 
 @end
 
@@ -29,11 +31,19 @@ static NSString * const KLPPZCollectionViewCell = @"KLPPZCollectionViewCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"相册";
-    [self.view addSubview:self.collectionView];
+    //初始换数据源
+    [self createData];
 
+    [self.view addSubview:self.collectionView];
     UILongPressGestureRecognizer *longTap = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longGest:)];
     [self.collectionView addGestureRecognizer:longTap];
+    self.longTap = longTap;
+}
 
+- (void)createData {
+    for (int i = 0; i < 20; i ++) {
+        [self.dataArray addObject:[NSString stringWithFormat:@"%zd.jpg", i]];
+    }
 }
 
 #pragma mark - 手势
@@ -41,12 +51,8 @@ static NSString * const KLPPZCollectionViewCell = @"KLPPZCollectionViewCell";
     switch (tap.state) {
         case UIGestureRecognizerStateBegan:
         {
-            NSIndexPath *touchIndexPath = [self.collectionView indexPathForItemAtPoint:[tap locationInView:self.collectionView]];
-            if (touchIndexPath) {
-                [self.collectionView beginInteractiveMovementForItemAtIndexPath:touchIndexPath];
-            }else{
-                break;
-            }
+            NSIndexPath *selectIndexPath = [self.collectionView indexPathForItemAtPoint:[self.longTap locationInView:self.collectionView]];
+            [self.collectionView beginInteractiveMovementForItemAtIndexPath:selectIndexPath];
         }
             break;
         case UIGestureRecognizerStateChanged:
@@ -60,6 +66,7 @@ static NSString * const KLPPZCollectionViewCell = @"KLPPZCollectionViewCell";
         }
             break;
         default:
+            [self.collectionView cancelInteractiveMovement];
             break;
     }
 }
@@ -70,10 +77,6 @@ static NSString * const KLPPZCollectionViewCell = @"KLPPZCollectionViewCell";
 }
 
 #pragma mark <UICollectionViewDataSource>
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 6;
-}
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return 20;
 }
@@ -81,9 +84,7 @@ static NSString * const KLPPZCollectionViewCell = @"KLPPZCollectionViewCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     LPPZCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:KLPPZCollectionViewCell forIndexPath:indexPath];
     // Configure the cell
-    NSInteger imageIndex = indexPath.row;
-    imageIndex = imageIndex % 24;
-    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%zd.jpg", imageIndex]];
+    cell.imageView.image = [UIImage imageNamed:self.dataArray[indexPath.item]];
     return cell;
 }
 
@@ -92,15 +93,21 @@ static NSString * const KLPPZCollectionViewCell = @"KLPPZCollectionViewCell";
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+//移动方法
+- (void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+    [self.dataArray exchangeObjectAtIndex:sourceIndexPath.item withObjectAtIndex:destinationIndexPath.item];
+    [self.collectionView reloadData];
+}
+
 #pragma mark - setter / getter
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
         layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-        layout.itemSize = CGSizeMake((KWidth-(kRowCount+1)*spacing)/kRowCount, 150);
+        layout.itemSize = CGSizeMake((KWidth - 40)/kRowCount, 150);
         layout.minimumLineSpacing = spacing;
-        layout.minimumInteritemSpacing = spacing;
-//        layout.sectionInset = UIEdgeInsetsMake(10, 0, 0, 0);
+        layout.minimumInteritemSpacing = 10;
+        layout.sectionInset = UIEdgeInsetsMake(10, 10, -10, -10);
 
         _collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:layout];
         [_collectionView registerClass:[LPPZCollectionViewCell class] forCellWithReuseIdentifier:KLPPZCollectionViewCell];
@@ -116,6 +123,13 @@ static NSString * const KLPPZCollectionViewCell = @"KLPPZCollectionViewCell";
         _collectionView.alwaysBounceHorizontal = YES;
     }
     return _collectionView;
+}
+
+- (NSMutableArray *)dataArray {
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _dataArray;
 }
 
 
